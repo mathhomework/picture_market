@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.myNav{
+    width:100%;
+    max-width:1200px;
+    margin-left:auto;
+    margin-right:auto;
+    height:60px;
+    background-color:#f3d352;
+}
+
+
+.myContainer{
+    width:100%;
+    max-width: 1200px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.listing{
+    border: 5px solid black;
+}
+
+.listing-img{
+    display:block;
+    height:120px;
+    width:120px;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 20px;
+}
+
+.myRow:before,
+.myRow:after {
+    content:"";
+    display: table;
+    clear: both;
+}
+
+[class*='col-']{
+    float: left;
+    min-height:1px;
+    width:16.66%;
+
+
+    background-color: #ffdcdc;
+}
+
+/*Column widths up to a division of six*/
+.col-1{
+    width:16.66%;
+}
+.col-2{
+    width: 33.33%;
+}
+.col-3{
+    width: 50%;
+}
+.col-4{
+    width:66.664%;
+}
+.col-5{
+    width:83.33%
+}
+.col-6{
+    width:100%
+}
+
+[class*="col-"] > p{
+    background-color: #ffc2c2;
+    padding:0;
+    margin: 0;
+    text-align: center;
+    color: white;
+}

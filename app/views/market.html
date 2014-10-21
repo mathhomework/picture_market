@@ -1,10 +1,27 @@
-<table>
-    <tr ng-repeat="product in products">
-        <td>
-            {{product.name}}
-        </td>
-        <td>
-            <a href = #{{product.id}}><img src = {{product.image}}></a>
-        </td>
-    </tr>
-</table>
+
+<div ng-repeat="product in products">
+    <div class="col-2">
+        <p>{{product.name}}</p>
+        <a href = #{{product.id}}><img class="listing-img" src = {{product.image}}></a>
+    </div>
+</div>
+<div class = "myContainer">
+    <div class="myRow">
+        <div class="col-1"><p>col-1</p></div>
+        <div class="col-1"><p>col-1</p></div>
+        <div class="col-1"><p>col-1</p></div>
+        <div class="col-1"><p>col-1</p></div>
+        <div class="col-1"><p>col-1</p></div>
+        <div class="col-1"><p>col-1</p></div>
+    </div>
+    <div class="myRow">
+        <div class="col-2"><p>col-2</p></div>
+        <div class="col-2"><p>col-2</p></div>
+        <div class="col-2"><p>col-2</p></div>
+    </div>
+    <div class="myRow">
+        <div class="col-3"><p>col-3</p></div>
+        <div class="col-3"><p>col-3</p></div>
+    </div>
+</div>
+

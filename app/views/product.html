@@ -1,0 +1,13 @@
+<div class="myContainer">
+    <div class="col-1 prev center">
+        <p ng-click="getNextProduct('prev')"><a href="#listing/{{ nextProductId }}">Previous Product</a></p>
+    </div>
+    <div class="col-4">
+        <h1>{{product.name}}</h1>
+        <img class="listing-img" src = "{{product.image}}">
+        <p>{{product.description}}</p>
+        <p>Price: {{product.price|currency}}</p>
+    </div>
+    <div class="col-1 center height">
+        <p ng-click="getNextProduct('next')"><a href="#listing/{{ nextProductId }}">NExt Product</a></p>
+    </div>

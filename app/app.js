@@ -8,10 +8,10 @@
                 controller:'marketController',
                 templateUrl:'views/market.html'
             })
-            .when('/listing/:id',
+            .when('/listing/:productId',
             {
-                controller:'marketController',
-                templateUrl:'market.html'
+                controller:'productController',
+                templateUrl:'views/product.html'
             })
             .otherwise({redirectTo: '/'})
     });

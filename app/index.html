@@ -5,12 +5,15 @@
     <script src="app.js"></script>
     <script src="services/marketFactory.js"></script>
     <script src="controllers/marketController.js"></script>
+    <script src="controllers/productController.js"></script>
+
     <link href="static/css/myStyle.css" type="text/css" rel="stylesheet">
 </head>
 <body>
     <div class="myNav">
         <p>Index page navbar</p>
-        <input type="text" placeholder="Find Colors">
+        <p><a href = "#">Home</a></p>
+        <input type="text" placeholder="Find Colors" ng-model = "productFilter.name">
         <button>Submit</button>
     </div>
     <ng-view></ng-view>

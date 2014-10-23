@@ -7,11 +7,13 @@
 //
 //        //download the data into a local object
 //        $scope.data = sync.$asObject();
-
+        $scope.expand = false;
         $scope.products = marketFactory.getProducts();
-
-        console.log($scope.products)
-
+        $scope.expandNavbar = function(){
+            $scope.expand = !$scope.expand;
+            console.log($scope.expand);
+        };
+        console.log('marketController at work');
     };
 
     marketController.$inject = ['$scope', 'marketFactory'];

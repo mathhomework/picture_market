@@ -1,21 +1,28 @@
 <html ng-app="marketApp">
 <head>
     <script src= "scripts/angular.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <script src="scripts/angular-route.js"></script>
     <script src="app.js"></script>
     <script src="services/marketFactory.js"></script>
     <script src="controllers/marketController.js"></script>
     <script src="controllers/productController.js"></script>
+    <script src="controllers/navbarController.js"></script>
+
 
     <link href="static/css/myStyle.css" type="text/css" rel="stylesheet">
 </head>
-<body>
-    <div class="myNav">
-        <p>Index page navbar</p>
-        <p><a href = "#">Home</a></p>
-        <input type="text" placeholder="Find Colors" ng-model = "productFilter.name">
-        <button>Submit</button>
+<body ng-controller="marketController">
+    <div class="myNav" ng-click="expandNavbar()" ng-class="{'opened': expand, 'closed': !expand}">
+        <h1 class="logo">Pic Market</h1>
+        <a href = "#">Home</a>
+        <span class="navbar-search">
+            <input type="text" placeholder="Find Colors" ng-model = "productFilter.name">
+            <button>Submit</button>
+        </span>
     </div>
+
+
     <ng-view></ng-view>
 </body>
 </html>

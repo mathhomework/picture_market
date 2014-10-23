@@ -1,11 +1,13 @@
-
+<div class = "myContainer" >
 <div ng-repeat="product in products| filter: productFilter ">
-    <div class="col-2">
-        <p>{{product.name}}</p>
-        <a href = "#listing/{{product.id}}"><img class="listing-img-sm" src = {{product.image}}></a>
+    <div class="col-2 listing-container">
+        <div class="listing">
+            <p>{{product.name}}</p>
+            <a href = "#listing/{{product.id}}"><img class="listing-img-sm" src = {{product.image}}></a>
+        </div>
     </div>
 </div>
-<div class = "myContainer">
+
     <div class="myRow">
         <div class="col-1"><p>col-1</p></div>
         <div class="col-1"><p>col-1</p></div>

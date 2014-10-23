@@ -6,21 +6,31 @@
                 name:'blue',
                 image: 'http://i.imgur.com/teQ7d2y.png',
                 price:'1.00',
-                description: 'what more could you possibly want?'
+                description: 'what more could you possibly want?',
+                hex:'#6600ff',
+                rgb:'102, 0, 255',
+                patrons:'John'
             },
             {
                 id:33,
                 name:'red',
                 image: 'http://i.imgur.com/hfuuwlO.png',
                 price:'1.25',
-                description: 'as red as a red square can be'
+                description: 'as red as a red square can be',
+                hex:'#ff000',
+                rgb:'255, 0, 0',
+                patrons:'Tim'
+
             },
             {
                 id:12,
                 name:'green',
                 image: 'http://i.imgur.com/5Hj5zBH.png',
                 price:'1.50',
-                description: 'just like you'
+                description: 'just like you',
+                hex:'#15FF00',
+                rgb:'21, 255, 0',
+                patrons:''
             }
         ];
         var factory = {};

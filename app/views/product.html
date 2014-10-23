@@ -7,6 +7,10 @@
         <img class="listing-img" src = "{{product.image}}">
         <p>{{product.description}}</p>
         <p>Price: {{product.price|currency}}</p>
+        <p>Patrons: {{product.patrons}}</p>
+        <p>Hex Code: {{product.hex}}</p>
+        <p>RGB: {{product.rgb}}</p>
+        <button class="btn-listing-addCart">Add to Cart</button>
     </div>
     <div class="col-1 center height">
         <p ng-click="getNextProduct('next')"><a href="#listing/{{ nextProductId }}">NExt Product</a></p>

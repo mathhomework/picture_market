@@ -7,24 +7,65 @@ body {
 
 .myContainer{
     width:100%;
-
     max-width: 1600px;
     margin-left:auto;
     margin-right:auto;
     /*overflow: hidden;*/
 
+    /*position: ;*/
+    /*top: 10%;*/
+    z-index: -1;
+
 }
 
 .myNav{
+
     width:100%;
+    position:absolute;
     max-width:1600px;
+    left: 0;
+    right: 0;
     margin-left:auto;
     margin-right:auto;
     height:50px;
     background-color:#f3d352;
     border-bottom: 4px solid black;
+    z-index:1;
+}
+.opened{
+    background:lightsalmon;
+    height:150px;
+    /*padding-bottom: 1px;*/
+    -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+    transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+.closed{
+    background:lightgrey;
+    padding-bottom: 40px;
+    -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
+    transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
 }
 
+.navbar-search{
+    text-align:center;
+}
+
+.navbar-items{
+    padding-left:10px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.navbar-right{
+    float:right;
+    padding-top:4px;
+    padding-right:10px;
+}
+
+.navbar-items>a{
+    color:black;
+    text-decoration:none;
+}
 
 [class*='listing-img']{
     display:block;
@@ -81,7 +122,7 @@ body {
 }
 
 .logo{
-    padding-top:13px;
+    padding-top:px;
     text-align:center;
 }
 
@@ -120,15 +161,15 @@ body {
 
 }
 
-.opened{
-    background:lightsalmon;
-    height:150px;
-    padding-bottom: 1px;
+/*padding 1st topbottom, 2nd rightleft*/
+.btn-listing-addCart{
+    font-size:16px;
+    padding: 12px 40px;
+    font-weight:bold;
+    background-color: white;
+    border: 3px black solid;
 
 }
-.closed{
-    background:lightgrey;
-    padding-bottom: 50px;
-
-
+.btn-listing-addCart:hover{
+    background-color:#ff0;
 }

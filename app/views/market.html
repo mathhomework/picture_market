@@ -2,7 +2,6 @@
 <div ng-repeat="product in products| filter: productFilter ">
     <div class="col-2 listing-container">
         <div class="listing">
-            <p>{{product.name}}</p>
             <a href = "#listing/{{product.id}}"><img class="listing-img-sm" src = {{product.image}}></a>
         </div>
     </div>

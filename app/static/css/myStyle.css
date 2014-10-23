@@ -49,6 +49,21 @@ body {
 .navbar-search{
     text-align:center;
 }
+.navbar-input{
+    border: 2px black solid;
+    height:33px;
+    width: 230px;
+    padding-left:10px;
+    font-weight:bold;
+}
+
+.navbar-btn{
+    border: 2px black solid;
+    height:33px;
+    width: 75px;
+    font-weight:bold;
+
+}
 
 .navbar-items{
     padding-left:10px;
@@ -67,12 +82,20 @@ body {
     text-decoration:none;
 }
 
-[class*='listing-img']{
+[class$='img-lg']{
+    /*margin has to be above margin-left, margin-right, which are both located below in class^='listing-img'*/
+    margin:20px;
+    background:lightpink;
+    padding: 20px;
+}
+
+
+[class^='listing-img']{
     display:block;
     margin-left:auto;
     margin-right:auto;
-    /*padding: 20px;*/
 }
+
 
 [class$='img-sm']{
     height:120px;
@@ -127,7 +150,7 @@ body {
 }
 
 [class*="col-"] > p,[class*="col-"] > h1,[class*="col-"] > h2, [class*="col-"] > h3{
-    background-color: #ffc2c2;
+    /*background-color: #ffc2c2;*/
     padding:0;
     margin: 0;
     text-align: center;
@@ -151,12 +174,12 @@ body {
 
 
 .listing-container .listing{
-    background-color:#ddd;
-    border: 2px #ddd solid;
-    border-radius:25px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    padding-right: 20px;
+    /*background-color:#ddd;*/
+    /*border: 2px #ddd solid;*/
+    /*border-radius:25px;*/
+    /*padding-left: 20px;*/
+    /*padding-bottom: 20px;*/
+    /*padding-right: 20px;*/
 
 
 }
@@ -173,3 +196,4 @@ body {
 .btn-listing-addCart:hover{
     background-color:#ff0;
 }
+

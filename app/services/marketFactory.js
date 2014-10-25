@@ -43,7 +43,7 @@
                 if(productId == products[x].id){
                     return {
                         product:products[x],
-                        dataPlace:x,
+                        dataPlace:x
                     };
                 }
             }

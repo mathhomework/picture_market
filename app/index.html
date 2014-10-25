@@ -1,5 +1,6 @@
 <html ng-app="marketApp">
 <head>
+    <script src="scripts/jquery-1.11.1.js"></script>
     <script src= "scripts/angular.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <script src="scripts/angular-route.js"></script>
@@ -8,11 +9,13 @@
     <script src="controllers/marketController.js"></script>
     <script src="controllers/productController.js"></script>
     <script src="controllers/navbarController.js"></script>
-
-
+    <script src="static/js/grid.js"></script>
     <link href="static/css/myStyle.css" type="text/css" rel="stylesheet">
+    <link href="static/css/grid.css" type="text/css" rel="stylesheet">
 </head>
 <body ng-controller="marketController" >
+    <div id="grid"></div>
+    <div class="square"></div>
 
     <div class="myNav"  ng-class="{'opened': expand, 'closed': !expand}">
         <img class = "navbar-right" src="http://www.phoneslate.com/img/glyphicons_halflings_115_shopping-cart@2x.png">

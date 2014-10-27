@@ -16,10 +16,10 @@
         }
 
 
-        $scope.paletteColor = "#ff0000";
+        $scope.paletteColor = "255, 0, 0";
         $scope.testBlueColor = function(){
             console.log("color change");
-            $scope.paletteColor = "#00ff00";
+            $scope.paletteColor = "0, 255, 0";
         };
 
         //FIREBASE
@@ -28,8 +28,6 @@
         var sync = $firebase(ref);
         //download the data into a local object
         var syncObject = sync.$asObject();
-        console.log(syncObject);
-
 
         syncObject.$bindTo($scope, "myGrid").then(function(){
             console.log($scope.myGrid);
@@ -47,6 +45,34 @@
             }
 
         };
+        //dependent on being inside compare_rgb
+        var set_sq_2= function(sq_2, sq_2_rgb){
+            sq_2_rgb = sq_2_rgb.r + ", " + sq_2_rgb.g + ", " + sq_2_rgb.b;
+            sync.$set(sq_2, sq_2_rgb);
+        };
+        //iterates over rgb btwn square clicked and sq_2 and adjusts sq_2's rgb values accordingly
+        //returns sq_2's rgb object.
+
+        var compare_rgb = function(square_rgb,sq_2){ //sq_2 is the other square ex. bottom
+            var sq_2_rgb = marketFactory.parseRgb($scope.myGrid[sq_2]);
+            var j = ['r','g','b'];
+            console.log(sq_2_rgb);
+            for(var i in j){
+                if(square_rgb[j[i]]>=sq_2_rgb[j[i]]){
+                    sq_2_rgb[j[i]] += 50;
+                }
+                else{
+                    sq_2_rgb[j[i]] -=50;
+                }
+                if(sq_2_rgb[j[i]]>255){
+                    sq_2_rgb[j[i]] = 255;
+                }
+                else if(sq_2_rgb[j[i]]<0){
+                    sq_2_rgb[j[i]] = 0;
+                }
+            }
+            set_sq_2(sq_2,sq_2_rgb);
+        };
 
         $scope.squareClick = function(position){
             //top bottom = a axis; left right = b axis
@@ -59,10 +85,18 @@
                 var left = pad(square_a) +"-"+ pad(square_b -1);
                 var right = pad(square_a) +"-"+ pad(square_b +1);
 
-                sync.$set(right, $scope.paletteColor);
-                sync.$set(top, "black");
-                sync.$set(bottom, "white");
-                sync.$set(left, "pink");
+                var square_rgb = marketFactory.parseRgb($scope.paletteColor);
+                console.log('yo');
+
+                compare_rgb(square_rgb, bottom);
+                compare_rgb(square_rgb, top);
+                compare_rgb(square_rgb, right);
+                compare_rgb(square_rgb, left);
+
+//                sync.$set(right, $scope.paletteColor);
+//                sync.$set(top, "245,0,205");
+//                sync.$set(bottom, "white");
+//                sync.$set(left, "pink");
             }
 
 

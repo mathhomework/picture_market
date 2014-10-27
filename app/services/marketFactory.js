@@ -86,6 +86,19 @@
             return r + "," + g + "," + b;
         };
 
+        factory.parseRgb = function(rgb){
+            rgb = rgb.replace(/\s/g, '');
+            var red = parseInt(rgb.split(',')[0]);
+            var green = parseInt(rgb.split(',')[1]);
+            var blue = parseInt(rgb.split(',')[2]);
+
+            return {
+                r:red,
+                g:green,
+                b:blue
+            };
+        };
+
         return factory;
     };
 

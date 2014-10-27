@@ -1,6 +1,6 @@
 <div id="grid">
-    <div class="square" ng-repeat="(position, hex) in myGrid" style="background-color:{{hex}};" ng-mousedown="squareClick(position)">
-    {{position}}
+    <div class="square" ng-repeat="(position, color) in myGrid" style="background-color:rgb({{color}});" ng-mousedown="squareClick(position)">
+    <!--{{position}}-->
 
     </div>
 

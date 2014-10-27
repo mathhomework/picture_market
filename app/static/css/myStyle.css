@@ -22,7 +22,7 @@ body {
 
     width:100%;
     position:absolute;
-    max-width:1600px;
+    /*max-width:1600px;*/
     left: 0;
     right: 0;
     margin-left:auto;

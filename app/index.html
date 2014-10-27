@@ -4,17 +4,17 @@
     <script src= "scripts/angular.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <script src="scripts/angular-route.js"></script>
+    <script src="scripts/firebase.js"></script>
+    <script src="scripts/angular-fire.js"></script>
     <script src="app.js"></script>
     <script src="services/marketFactory.js"></script>
     <script src="controllers/marketController.js"></script>
     <script src="controllers/productController.js"></script>
     <script src="controllers/navbarController.js"></script>
-    <script src="static/js/grid.js"></script>
     <link href="static/css/myStyle.css" type="text/css" rel="stylesheet">
     <link href="static/css/grid.css" type="text/css" rel="stylesheet">
 </head>
 <body ng-controller="marketController" >
-    <div id="grid"></div>
     <div class="square"></div>
 
     <div class="myNav"  ng-class="{'opened': expand, 'closed': !expand}">
@@ -22,7 +22,7 @@
         <div class="navbar-items"
             <span ng-click="expandNavbar()">
                 Search
-            </span> | <a class="navbar-item" ng-href="#">Home</a>
+            </span> | <a class="navbar-item" ng-href="#">Home</a> | <span ng-click="createGridData()">Create Grid Data</span>
     </div>
 
         <h1 class="logo" ng-click="expandNavbar()">Pic Market</h1>

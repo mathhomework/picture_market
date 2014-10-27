@@ -1,5 +1,5 @@
 (function(){
-    var marketApp = angular.module('marketApp', ['ngRoute']);
+    var marketApp = angular.module('marketApp', ['ngRoute', 'firebase']);
 
     marketApp.config(function($routeProvider){
         $routeProvider

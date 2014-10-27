@@ -1,11 +1,5 @@
 (function(){
     var marketController = function($scope,  marketFactory, $firebase){
-        var ref = new Firebase("https://picmarket.firebaseio.com/");
-        //angularfire ref to the data
-        var sync = $firebase(ref);
-        //download the data into a local object
-        var syncObject = sync.$asArray();
-        console.log(syncObject);
 
 
         $scope.expand = false;
@@ -16,16 +10,52 @@
         };
         console.log('marketController at work');
 
-        $scope.paletteColor = "#f00";
-
-        $scope.testBlueColor = function(){
-            $scope.paletteColor = "0f0";
-        };
-
-
+        //fxn to format 1 to 01
         function pad(d) {
             return (d < 10) ? '0' + d.toString() : d.toString();
         }
+
+
+        $scope.paletteColor = "#f00";
+        $scope.myGrid = {};
+        $scope.testBlueColor = function(){
+            console.log("color change");
+            $scope.paletteColor = "0f0";
+        };
+        //create myGrid object
+
+//        (function(){
+//            for (var i= 1; i<=20; i++) {
+//                for (var j = 1; j <= 20; j++) {
+//                    var myKey = pad(i) + "-" + pad(j);
+//                    $scope.myGrid[myKey] = $scope.paletteColor;
+//
+//
+//                }
+//            }
+//            console.log($scope.myGrid);
+//        }());
+
+        //FIREBASE
+        var ref = new Firebase("https://picmarket.firebaseio.com/");
+        //angularfire ref to the data
+        var sync = $firebase(ref);
+        //download the data into a local object
+        var syncObject = sync.$asObject();
+        console.log(syncObject);
+
+        $scope.myGrid = syncObject;
+
+
+//        syncObject.bindTo($scope, "myGrid").then(function(){
+//            console.log($scope.myGrid);
+//            $scope.myGrid. = "baz";
+//            ref.$set({foo:"baz"});
+//        });
+
+
+
+
         $scope.createGridData = function(){
             console.log("reseting firebase data");
             ref.remove();
@@ -39,13 +69,15 @@
 
         };
 
-
-        $scope.squareClick = function(x, y){
-            console.log("square clicked");
-            var myKey = pad(x) + "-" + pad(y);
-            syncObject.$update({position:myKey , body:$scope.paletteColor});
-            console.log(myKey);
+        $scope.squareClick = function(position){
+            syncObject.$update(position)
         };
+//        $scope.squareClick = function(x, y){
+//            console.log("square clicked");
+//            var myKey = pad(x) + "-" + pad(y);
+//            syncObject.$update({position:myKey , body:$scope.paletteColor});
+//            console.log(myKey);
+//        };
 
 //        var createGrid = function(){
 //            for (var i= 1; i<=20; i++){

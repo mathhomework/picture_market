@@ -64,6 +64,28 @@
                 return {};
             }
         };
+
+        factory.componentToHex = function(c){
+            var hex = c.toString(16);
+            return hex.length == 1 ? "0" + hex : hex;
+        };
+
+        factory.rgbToHex = function(r,g,b){
+            return "#" + factory.componentToHex(r) + factory.componentToHex(g) + factory.componentToHex(b);
+        };
+
+        factory.hexToRgb = function(hex) {
+            if(hex.charAt(0)==="#"){
+                hex = hex.substr(1);
+            }
+            var bigint = parseInt(hex, 16);
+            var r = (bigint >> 16) & 255;
+            var g = (bigint >> 8) & 255;
+            var b = bigint & 255;
+
+            return r + "," + g + "," + b;
+        };
+
         return factory;
     };
 

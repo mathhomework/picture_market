@@ -3,7 +3,7 @@ $(document).ready(function(){
 var createGrid = function(){
     for (var i= 1; i<=20; i++){
         for(var j =1; j<=20; j++){
-            $('#grid').append("<div class='square' style='background:{{ paletteColor}}' ng-click='squareClick("+j+", "+i+")' data-x='"+j+"' data-y='"+i+"'></div>");
+            $('#grid').append("<div class='square' style='background:{{ paletteColor}}'; ng-click='squareClick("+j+", "+i+")' data-x='"+j+"' data-y='"+i+"'></div>");
 
         }
     }

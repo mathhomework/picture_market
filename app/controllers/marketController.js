@@ -18,12 +18,22 @@
 
         $scope.paletteColor = "#f00";
 
+        $scope.testBlueColor = function(){
+            $scope.paletteColor = "0f0";
+        };
+
+
+        function pad(d) {
+            return (d < 10) ? '0' + d.toString() : d.toString();
+        }
         $scope.createGridData = function(){
+            console.log("reseting firebase data");
             ref.remove();
             for (var i= 1; i<=20; i++) {
                 for (var j = 1; j <= 20; j++) {
-                    var myKey = i+"-"+j;
-                    syncObject.$add({position:myKey, hex:$scope.paletteColor});
+                    var myKey = pad(i)+"-"+pad(j);
+                    sync.$set(myKey, $scope.paletteColor);
+
                 }
             }
 
@@ -31,41 +41,31 @@
 
 
         $scope.squareClick = function(x, y){
-            var myKey = x + "-" + y;
-            syncObject.$add({position:myKey , body:$scope.paletteColor});
+            console.log("square clicked");
+            var myKey = pad(x) + "-" + pad(y);
+            syncObject.$update({position:myKey , body:$scope.paletteColor});
             console.log(myKey);
         };
 
-        var createGrid = function(){
-            for (var i= 1; i<=20; i++){
-                for(var j =1; j<=20; j++){
-                    $('#grid').append("<div class='square' style='background:{{ paletteColor}}' ng-click='squareClick("+j+", "+i+")' data-x='"+j+"' data-y='"+i+"'></div>");
-
-                }
-            }
-        };
-
-
-
-        var init = function(){
-            createGrid();
-
-        };
-
-        (function(){
-            init();
-        }())
-
-
-
-
-
-
-
-
-
-
-
+//        var createGrid = function(){
+//            for (var i= 1; i<=20; i++){
+//                for(var j =1; j<=20; j++){
+//                    $('#grid').append("<div class='square' style='background:{{ paletteColor}}' ng-click='squareClick("+j+", "+i+")' data-x='"+j+"' data-y='"+i+"'></div>");
+//
+//                }
+//            }
+//        };
+//
+//
+//
+//        var init = function(){
+//            createGrid();
+//
+//        };
+//
+//        (function(){
+//            init();
+//        }())
 
 
 

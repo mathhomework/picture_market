@@ -1,12 +1,13 @@
 <div id="grid">
-    <div class="square" ng-repeat="(position, hex) in myGrid" style="background-color:{{hex}}" ng-click="squareClick({{position}})">
+    <div class="square" ng-repeat="(position, hex) in myGrid" style="background-color:{{hex}};" ng-click="squareClick(position)">
 
 
 
     </div>
 
 </div>
-
+<span ng-click="testBlueColor()">Select Blue</span> |
+<span ng-model="paletteColor">{{paletteColor}}</span>
 <div class = "myContainer" >
 
 <div ng-repeat="product in products| filter: productFilter ">

@@ -17,24 +17,10 @@
 
 
         $scope.paletteColor = "#f00";
-        $scope.myGrid = {};
         $scope.testBlueColor = function(){
             console.log("color change");
-            $scope.paletteColor = "0f0";
+            $scope.paletteColor = "#0f0";
         };
-        //create myGrid object
-
-//        (function(){
-//            for (var i= 1; i<=20; i++) {
-//                for (var j = 1; j <= 20; j++) {
-//                    var myKey = pad(i) + "-" + pad(j);
-//                    $scope.myGrid[myKey] = $scope.paletteColor;
-//
-//
-//                }
-//            }
-//            console.log($scope.myGrid);
-//        }());
 
         //FIREBASE
         var ref = new Firebase("https://picmarket.firebaseio.com/");
@@ -44,17 +30,10 @@
         var syncObject = sync.$asObject();
         console.log(syncObject);
 
-        $scope.myGrid = syncObject;
 
-
-//        syncObject.bindTo($scope, "myGrid").then(function(){
-//            console.log($scope.myGrid);
-//            $scope.myGrid. = "baz";
-//            ref.$set({foo:"baz"});
-//        });
-
-
-
+        syncObject.$bindTo($scope, "myGrid").then(function(){
+            console.log($scope.myGrid);
+        });
 
         $scope.createGridData = function(){
             console.log("reseting firebase data");
@@ -70,7 +49,11 @@
         };
 
         $scope.squareClick = function(position){
-            syncObject.$update(position)
+            console.log("square clicked");
+            console.log(position);
+            console.log($scope.paletteColor);
+//            $scope.myGrid.position = $scope.paletteColor;
+            sync.$set(position, $scope.paletteColor);
         };
 //        $scope.squareClick = function(x, y){
 //            console.log("square clicked");

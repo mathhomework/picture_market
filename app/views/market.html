@@ -1,12 +1,4 @@
-<div id="grid">
-    <div class="square" ng-repeat="(position, color) in myGrid" style="background-color:rgb({{color}});" ng-mousedown="squareClick(position)">
-    <!--{{position}}-->
 
-    </div>
-
-</div>
-<span ng-click="testBlueColor()">Select Green</span> |
-<span ng-model="paletteColor">{{paletteColor}}</span>
 <div class = "myContainer" >
 
 <div ng-repeat="product in products| filter: productFilter ">
@@ -16,27 +8,24 @@
             <a href = "#listing/{{product.id}}"><img class="listing-img-sm" src = {{product.image}}></a>
         </div>
     </div>
-</div>
+<!--</div>-->
 
-    <div class="myRow">
-        <div class="col-1"><p>col-1</p></div>
-        <div class="col-1"><p>col-1</p></div>
-        <div class="col-1"><p>col-1</p></div>
-        <div class="col-1"><p>col-1</p></div>
-        <div class="col-1"><p>col-1</p></div>
-        <div class="col-1"><p>col-1</p></div>
-    </div>
-    <div class="myRow">
-        <div class="col-2"><p>col-2</p></div>
-        <div class="col-2"><p>col-2</p></div>
-        <div class="col-2"><p>col-2</p></div>
-    </div>
-    <div class="myRow">
-        <div class="col-3"><p>col-3</p></div>
-        <div class="col-3"><p>col-3</p></div>
-    </div>
-</div>
-    <!--<script src="static/js/grid.js"></script>-->
-
-
+    <!--<div class="myRow">-->
+        <!--<div class="col-1"><p>col-1</p></div>-->
+        <!--<div class="col-1"><p>col-1</p></div>-->
+        <!--<div class="col-1"><p>col-1</p></div>-->
+        <!--<div class="col-1"><p>col-1</p></div>-->
+        <!--<div class="col-1"><p>col-1</p></div>-->
+        <!--<div class="col-1"><p>col-1</p></div>-->
+    <!--</div>-->
+    <!--<div class="myRow">-->
+        <!--<div class="col-2"><p>col-2</p></div>-->
+        <!--<div class="col-2"><p>col-2</p></div>-->
+        <!--<div class="col-2"><p>col-2</p></div>-->
+    <!--</div>-->
+    <!--<div class="myRow">-->
+        <!--<div class="col-3"><p>col-3</p></div>-->
+        <!--<div class="col-3"><p>col-3</p></div>-->
+    <!--</div>-->
+<!--</div>-->
 

@@ -22,6 +22,10 @@
             $scope.paletteColor = "0, 255, 0";
         };
 
+        $scope.selectColor = function(rgb){
+            $scope.paletteColor = rgb;
+        };
+
         //FIREBASE
         var ref = new Firebase("https://picmarket.firebaseio.com/");
         //angularfire ref to the data

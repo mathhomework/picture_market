@@ -18,10 +18,11 @@
     <div class="square"></div>
 
     <div class="myNav"  ng-class="{'opened': expand, 'closed': !expand}">
-        <img class = "navbar-right" src="http://www.phoneslate.com/img/glyphicons_halflings_115_shopping-cart@2x.png">
+        <a class = "navbar-right" href = "#/grid"><img id = "square_gif"  src ="http://i.imgur.com/HFawWWu.gif"></a>
+        <!--<img class = "navbar-right" src="http://www.phoneslate.com/img/glyphicons_halflings_115_shopping-cart@2x.png">-->
         <div class="navbar-items"
             <span ng-click="expandNavbar()">Search</span> |
-            <a class="navbar-item" ng-href="#">Home</a> |
+            <a class="navbar-item" ng-href="#">Home/Store</a> |
             <span ng-click="createGridData()">Create Grid Data</span> |
 
     </div>

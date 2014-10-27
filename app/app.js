@@ -13,6 +13,11 @@
                 controller:'productController',
                 templateUrl:'views/product.html'
             })
+            .when('/grid',
+            {
+                controller:'marketController',
+                templateUrl:'views/grid.html'
+            })
             .otherwise({redirectTo: '/'})
     });
 }());

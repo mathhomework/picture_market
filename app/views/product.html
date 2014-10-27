@@ -1,6 +1,6 @@
 <div class="myContainer">
     <div class="col-1 prev">
-        <p ng-click="getNextProduct('prev')"><a href="#listing/{{ nextProductId }}">Previous Product</a></p>
+        <p ng-click="getNextProduct('prev')"><a class = "nextprev" href="#listing/{{ nextProductId }}"><</a></p>
     </div>
     <div class="col-4">
         <h1>{{product.name}}</h1>
@@ -10,9 +10,9 @@
         <p>Patrons: {{product.patrons}}</p>
         <p>Hex Code: {{product.hex}}</p>
         <p>RGB: {{product.rgb}}</p>
-        <button class="btn-listing-addCart">Add to Cart</button>
+        <!--<button class="btn-listing-addCart">Add to Cart</button>-->
     </div>
 
-    <div class="col-1 center height">
-        <p ng-click="getNextProduct('next')"><a href="#listing/{{ nextProductId }}">NExt Product</a></p>
+    <div class="col-1 center">
+        <p ng-click="getNextProduct('next')"><a class = "nextprev" href="#listing/{{ nextProductId }}">></a></p>
     </div>

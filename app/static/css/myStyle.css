@@ -29,15 +29,22 @@ body {
     margin-right:auto;
     height:50px;
     background-color:#f3d352;
+
     border-bottom: 4px solid black;
     z-index:1;
 }
+
+#square_gif{
+    width: 32px;
+    height: 32px;
+}
+
 .opened{
     background:lightsalmon;
     height:150px;
     /*padding-bottom: 1px;*/
-    -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-    transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+    -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s;
+    transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s;
 }
 .closed{
     background:lightgrey;
@@ -162,9 +169,12 @@ body {
     margin-right:auto;
 }
 
-.height{
-    height:20%;
-    background:#445;
+.nextprev{
+    padding-top:400px;
+    font-size:370px;
+    /*font-weight:bold;*/
+    text-decoration:none;
+    color:black;
 }
 
 .listing-container{
@@ -197,3 +207,6 @@ body {
     background-color:#ff0;
 }
 
+.palette{
+    padding-left:20px;
+}

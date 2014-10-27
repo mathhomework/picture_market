@@ -1,0 +1,14 @@
+<div id="grid">
+    <div class="square" ng-repeat="(position, color) in myGrid" style="background-color:rgb({{color}});" ng-mousedown="squareClick(position)">
+    <!--{{position}}-->
+
+    </div>
+
+</div>
+<div id="sidebar" class="col-1">
+<div ng-model="paletteColor">Color selected: {{paletteColor}}</div>
+    <br>
+<div ng-repeat="product in products" ng-click="selectColor(product.rgb);">Select {{product.name}} | RGB: {{product.rgb}}</div>
+
+
+</div>

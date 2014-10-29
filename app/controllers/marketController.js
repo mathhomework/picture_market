@@ -16,10 +16,10 @@
         }
 
 
-        $scope.paletteColor = "255, 0, 0";
+        $scope.paletteColor = "255, 255, 255";
         $scope.testBlueColor = function(){
             console.log("color change");
-            $scope.paletteColor = "0, 255, 0";
+            $scope.paletteColor = "255, 255, 255";
         };
 
         $scope.selectColor = function(rgb){

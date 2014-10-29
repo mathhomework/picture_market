@@ -8,7 +8,7 @@
                 price:'1.00',
                 description: 'what more could you possibly want?',
                 hex:'#6600ff',
-                rgb:'102, 0, 255',
+                rgb:'0, 0, 255',
                 patrons:'John'
             },
             {
@@ -29,7 +29,7 @@
                 price:'1.50',
                 description: 'just like you',
                 hex:'#15FF00',
-                rgb:'21, 255, 0',
+                rgb:'0, 255, 0',
                 patrons:''
             }
         ];

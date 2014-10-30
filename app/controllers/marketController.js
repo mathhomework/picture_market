@@ -4,6 +4,8 @@
         var row_size = 20;
         $scope.expand = false;
         $scope.products = marketFactory.getProducts();
+        
+        console.log($scope.products);
         $scope.expandNavbar = function(){
             $scope.expand = !$scope.expand;
             console.log($scope.expand);
@@ -34,7 +36,6 @@
         var syncObject = sync.$asObject();
 
         syncObject.$bindTo($scope, "myGrid").then(function(){
-            console.log($scope.myGrid);
         });
 
         $scope.createGridData = function(){

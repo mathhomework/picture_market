@@ -83,7 +83,7 @@
             var g = (bigint >> 8) & 255;
             var b = bigint & 255;
 
-            return r + "," + g + "," + b;
+            return r + ", " + g + ", " + b;
         };
 
         factory.parseRgb = function(rgb){

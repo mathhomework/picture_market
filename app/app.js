@@ -18,6 +18,11 @@
                 controller:'marketController',
                 templateUrl:'views/grid.html'
             })
+            .when('/create',
+            {
+                controller:'createController',
+                templateUrl:'views/create.html'
+            })
             .otherwise({redirectTo: '/'})
     });
 }());

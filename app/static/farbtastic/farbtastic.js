@@ -16,7 +16,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
-
+var hex;
 jQuery.fn.farbtastic = function (callback) {
   $.farbtastic(this, callback);
   return this;
@@ -243,10 +243,16 @@ jQuery._farbtastic = function (container, callback) {
         backgroundColor: fb.color,
         color: fb.hsl[2] > 0.5 ? '#000' : '#fff'
       });
-
+//My custom part for create.html
+      $('#createDiv').css({
+          backgroundColor:fb.color
+      });
+      $('#createHex').empty().append(fb.color.toUpperCase());
+      $('#createRgb').empty().append(fb.hexToRgb(fb.color));
       // Change linked value
       $(fb.callback).each(function() {
         if (this.value && this.value != fb.color) {
+          hex = fb.color;
           this.value = fb.color;
         }
       });
@@ -271,6 +277,18 @@ jQuery._farbtastic = function (container, callback) {
   };
 
   /* Various color utility functions */
+//my custom hexToRgb function from angular controller
+  fb.hexToRgb = function(hex) {
+            if(hex.charAt(0)==="#"){
+                hex = hex.substr(1);
+            }
+            var bigint = parseInt(hex, 16);
+            var r = (bigint >> 16) & 255;
+            var g = (bigint >> 8) & 255;
+            var b = bigint & 255;
+
+            return r + ", " + g + ", " + b;
+        };
   fb.pack = function (rgb) {
     var r = Math.round(rgb[0] * 255);
     var g = Math.round(rgb[1] * 255);

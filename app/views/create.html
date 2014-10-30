@@ -1,0 +1,28 @@
+<div class="myContainer">
+    <div class="myRow">
+        <div class = "center col-2" >
+            <form style="display:none;"><input type="text" id="color" name="color" value="#123456" class="font"/></form>
+            <div id = "colorpicker"></div>
+            <br>
+            Name:<input ng-model="create_name" type="text">
+            Description:<textarea ng-model="create_description" type="text"></textarea>
+        </div>
+        <div class = "col-2">
+            <h1>{{create_name}}</h1>
+            <div id="createDiv" class="listing-img-lg"></div>
+            <p>{{create_description}}</p>
+            <p>Price: $1.00</p>
+            <p>Patrons: </p>
+            <p>Hex Code: <span id="createHex"></span></p>
+            <p>RGB: <span id ="createRgb"></span> </p>
+            <input type = text>
+            <button class="btn-listing">Create</button>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#colorpicker').farbtastic('#color');
+    });
+</script>

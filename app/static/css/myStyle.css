@@ -5,6 +5,9 @@ body {
 
 }
 
+*:focus{
+    outline: 0;
+}
 .myContainer{
     width:100%;
     max-width: 1600px;
@@ -91,9 +94,9 @@ body {
 
 [class$='img-lg']{
     /*margin has to be above margin-left, margin-right, which are both located below in class^='listing-img'*/
-    margin:20px;
-    background:lightpink;
-    padding: 20px;
+    width:300px;
+    height:300px;
+    /*padding: 20px;*/
 }
 
 
@@ -195,18 +198,26 @@ body {
 }
 
 /*padding 1st topbottom, 2nd rightleft*/
-.btn-listing-addCart{
+[class^= 'btn-listing']{
     font-size:16px;
     padding: 12px 40px;
     font-weight:bold;
     background-color: white;
     border: 3px black solid;
-
 }
+
 .btn-listing-addCart:hover{
     background-color:#ff0;
 }
 
 .palette{
     padding-left:20px;
+}
+
+.font{
+    font-family: 'Lato', sans-serif; !important
+}
+
+#createDiv{
+
 }

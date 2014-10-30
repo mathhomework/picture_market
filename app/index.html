@@ -15,6 +15,8 @@
     <link href="static/css/grid.css" type="text/css" rel="stylesheet">
     <script type="text/javascript" src="static/farbtastic/farbtastic.js"></script>
     <link rel="stylesheet" href="static/farbtastic/farbtastic.css" type="text/css" />
+    <script src="controllers/createController.js"></script>
+
 </head>
 <body ng-controller="marketController" >
     <div class="square"></div>
@@ -22,10 +24,11 @@
     <div class="myNav"  ng-class="{'opened': expand, 'closed': !expand}">
         <a class = "navbar-right" href = "#/grid"><img id = "square_gif"  src ="http://i.imgur.com/HFawWWu.gif"></a>
         <!--<img class = "navbar-right" src="http://www.phoneslate.com/img/glyphicons_halflings_115_shopping-cart@2x.png">-->
-        <div class="navbar-items"
+        <div class="navbar-items">
             <span ng-click="expandNavbar()">Search</span> |
-            <a class="navbar-item" ng-href="#">Home/Store</a> |
-            <span ng-click="createGridData()">Create Grid Data</span> |
+            <a ng-href="#">Home/Store</a> |
+            <span ng-click="createGridData()">Reset Grid Data</span> |
+            <a ng-href="#/create">Create </a>
 
     </div>
 

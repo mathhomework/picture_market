@@ -1,7 +1,7 @@
 (function(){
     var marketFactory = function($firebase){
-        var listingsref = new Firebase("https://piclistings.firebaseio.com");
-        var sync2 = $firebase(listingsref);
+        var listingsRef = new Firebase("https://piclistings.firebaseio.com");
+        var sync2 = $firebase(listingsRef);
         var products = sync2.$asArray();
 //        products.$loaded().then(function(products) {
 //            console.log(products);
@@ -42,7 +42,7 @@
 //        ];
         var factory = {};
         factory.getListingsRef = function(){
-            return listingsref;
+            return listingsRef;
         };
         factory.getProducts = function(){
             console.log(products);

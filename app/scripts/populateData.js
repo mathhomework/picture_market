@@ -1,7 +1,7 @@
 var populateData = function(){
     var ref = new Firebase("https://piclistings.firebaseio.com");
     ref.set(
-        [
+
             {
                 id:42,
                 name:'blue',
@@ -30,6 +30,6 @@ var populateData = function(){
                 rgb:'0, 255, 0',
                 patrons:''
             }
-        ]
+
     );
 };

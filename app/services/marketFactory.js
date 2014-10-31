@@ -41,6 +41,9 @@
 //            }
 //        ];
         var factory = {};
+        factory.getListingsRef = function(){
+            return listingsref;
+        };
         factory.getProducts = function(){
             console.log(products);
             return products;

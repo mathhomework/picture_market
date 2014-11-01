@@ -1,6 +1,9 @@
 <html ng-app="marketApp">
 <head>
     <script src="scripts/jquery-1.11.1.js"></script>
+
+    <link href = "static/bootstrap-3.2.0-dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="static/bootstrap-3.2.0-dist/js/bootstrap.js"></script>
     <script src= "scripts/angular.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <script src="scripts/angular-route.js"></script>
@@ -23,7 +26,6 @@
 
 </head>
 <body ng-controller="marketController" >
-    <div class="square"></div>
 
     <div class="myNav"  ng-class="{'opened': expand, 'closed': !expand}">
         <a class = "navbar-right" href = "#/grid"><img id = "square_gif"  src ="http://i.imgur.com/HFawWWu.gif"></a>
@@ -33,8 +35,7 @@
             <a ng-href="#">Home/Store</a> |
             <span ng-click="createGridData()">Reset Grid Data</span> |
             <a ng-href="#/create">Create </a>
-
-    </div>
+        </div>
 
         <h1 class="logo" ng-click="expandNavbar()">Pic Market</h1>
 

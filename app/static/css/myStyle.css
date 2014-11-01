@@ -79,6 +79,7 @@ body {
     padding-left:10px;
     font-size:22px;
     font-weight:bold;
+    color:black;
 }
 
 .navbar-right{
@@ -92,12 +93,6 @@ body {
     text-decoration:none;
 }
 
-[class$='img-lg']{
-    /*margin has to be above margin-left, margin-right, which are both located below in class^='listing-img'*/
-    width:300px;
-    height:300px;
-    /*padding: 20px;*/
-}
 
 
 [class^='listing-img']{
@@ -106,11 +101,62 @@ body {
     margin-right:auto;
 }
 
+[class$='img-lg']{
+    /*margin has to be above margin-left, margin-right, which are both located below in class^='listing-img'*/
+    width:300px;
+    height:300px;
+    /*padding: 20px;*/
+}
+
 
 [class$='img-sm']{
     height:120px;
     width:120px;
 }
+
+@media(max-width:526px){
+    [class$='img-sm']{
+       height:38px;
+       width:38px;
+       margin-bottom: 15px;
+    }
+    .navbar-items{
+        font-size:12px;
+    }
+}
+
+@media(min-width: 526px){
+    [class$='img-sm']{
+       height:80px;
+       width:80px;
+       margin-bottom: 20px;
+   }
+}
+@media(min-width:767px){
+   [class$='img-sm']{
+       height:120px;
+       width:120px;
+       margin-bottom: 4px;
+   }
+}
+
+@media(min-width:992px){
+   [class$='img-sm']{
+       height:120px;
+       width:120px;
+       margin-bottom: 40px;
+   }
+}
+
+@media(min-width:1200px){
+   [class$='img-sm']{
+       height:120px;
+       width:120px;
+       margin-bottom: 70px;
+   }
+}
+
+
 
 
 
@@ -155,7 +201,7 @@ body {
 }
 
 .logo{
-    padding-top:px;
+    color:black;
     text-align:center;
 }
 
@@ -220,4 +266,9 @@ body {
 
 #createDiv{
 
+}
+
+.black-outline{
+    color: #fff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }

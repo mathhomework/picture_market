@@ -8,7 +8,7 @@
 <div id="sidebar" class="col-1">
 <div ng-model="paletteColor">Color selected: {{paletteColor}}</div>
     <br>
-<div ng-repeat="product in products" ng-click="selectColor(product.rgb);">Select {{product.name}} | RGB: {{product.rgb}}</div>
+<div ng-repeat="product in products" ng-click="selectColor(product.rgb);">Select <span class="black-outline" style="color:{{product.hex}};">{{product.name}}</span> | RGB: {{product.rgb}}</div>
 
 
 </div>

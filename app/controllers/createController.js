@@ -27,18 +27,19 @@
 //            if($scope.reqs==null){
                 console.log("creating color");
                 var create_name = $scope.create_name;
+            console.log(create_name);
                 var create_description = $scope.create_description;
-                listingsRef.$set({
-                    create_name:{
-                        id:14,
+                listingsRef.child(create_name).update(
+                    {
+                        id: 14,
                         name: create_name,
-                        price:'1:50',
-                        description:create_description,
+                        price: '1.50',
+                        description: create_description,
                         hex: hex,
                         rgb: rgb,
                         patrons: ''
                     }
-                });
+                );
 //            }
         };
     };

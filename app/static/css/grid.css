@@ -27,9 +27,10 @@
 .square{
 
     /*max-width:100%;*/
+    /*position: relative;*/
     float: left;
     width:5%;
-    height:5%;
+    height:6%;
     display:block;
     background:orange;
     box-sizing: border-box;
@@ -39,11 +40,16 @@
 
 #sidebar{
     font-weight:bold;
-    padding:20px;
-    margin-left:20px;
+    padding:10px;
+    /*margin-left:20px;*/
     border: 4px black solid;
     /*padding-left: 30px;*/
 }
+
+/*.black-outline{*/
+    /*color: #fff;*/
+    /*text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;*/
+/*}*/
 /*@media (max-width:1000px){*/
     /*.square{*/
         /*width:10%;*/

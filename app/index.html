@@ -1,7 +1,7 @@
 <html ng-app="marketApp">
 <head>
     <script src="scripts/jquery-1.11.1.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='static/css/lato.css' rel='stylesheet' type='text/css'>
 
     <link href = "static/bootstrap-3.2.0-dist/css/bootstrap.css" rel="stylesheet" type="text/css">
     <script src="static/bootstrap-3.2.0-dist/js/bootstrap.js"></script>
@@ -28,7 +28,7 @@
 <body ng-controller="marketController" >
 
     <div class="myNav"  ng-class="{'opened': expand, 'closed': !expand}">
-        <a class = "navbar-right" href = "#/grid"><img id = "square_gif"  src ="http://i.imgur.com/HFawWWu.gif"></a>
+        <a class = "navbar-right" href = "#/grid"><img id = "square_gif"  src ="//i.imgur.com/HFawWWu.gif"></a>
         <!--<img class = "navbar-right" src="http://www.phoneslate.com/img/glyphicons_halflings_115_shopping-cart@2x.png">-->
         <div class="navbar-items">
             <span ng-click="expandNavbar()">Search</span> |
@@ -40,7 +40,7 @@
         <h1 class="logo" ng-click="expandNavbar()">Pic Market</h1>
 
         <div ng-show="expand" class="navbar-search">
-            <input class="navbar-input" type="text" placeholder="Find Colors" ng-model = "productFilter.name">
+            <input class="navbar-input" type="text" placeholder="Find Colors" ng-model = "productFilter">
             <button class="navbar-btn">Search</button>
         </div>
     </div>

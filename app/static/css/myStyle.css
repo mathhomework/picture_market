@@ -96,7 +96,7 @@ body {
 
 
 [class^='listing-img']{
-    display:block;
+
     margin-left:auto;
     margin-right:auto;
 }
@@ -173,7 +173,6 @@ body {
     min-height:1px;
     padding-left:10px;
     padding-right:10px;
-    width:16.66%;
     box-sizing:border-box;
 
 
@@ -205,7 +204,7 @@ body {
     text-align:center;
 }
 
-[class*="col-"] > p,[class*="col-"] > h1,[class*="col-"] > h2, [class*="col-"] > h3{
+[class*="col-"] > p,[class*="col-"] > h1,[class*="col-"] > h2,[class*="col-"] > h3{
     /*background-color: #ffc2c2;*/
     padding:0;
     margin: 0;
@@ -264,11 +263,26 @@ body {
     font-family: 'Lato', sans-serif; !important
 }
 
-#createDiv{
-
+#create_name, #create_description{
+    border: 3px black solid;
+    padding-left:7px;
+    padding-right: 7px;
+}
+#create_name{
+    margin-bottom:20px;
 }
 
+.create{
+    display:inline-block;
+    text-align: center;
+}
 .black-outline{
     color: #fff;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+#color-div{
+    margin-right:auto;
+    margin-left:auto;
+
 }

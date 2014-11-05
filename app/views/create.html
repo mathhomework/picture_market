@@ -1,29 +1,39 @@
-<div class="myContainer">
-    <div class="myRow">
-        <div class = "center col-2" >
-            <form style="display:none;"><input type="text" id="color" name="color" value="#123456" class="font"/></form>
-            <div id = "colorpicker"></div>
-            <br>
-            Name:<input ng-model="create_name" type="text">
-            Description:<textarea ng-model="create_description" type="text"></textarea>
-        </div>
-        <div class = "col-2">
-            <h1>{{create_name}}</h1>
-            <div id="createDiv" class="listing-img-lg"></div>
-            <p>{{create_description}}</p>
-            <p>Price: $1.00</p>
-            <p>Patrons: </p>
-            <p>Hex Code: <span id="createHex"></span></p>
-            <p>RGB: <span id ="createRgb"></span> </p>
-            <input type = text>
-            <button class="btn-listing" ng-click="createListing()">Create</button>
-            <div>
-                <ul>
-                    <li ng-show = "reqs.name_req">{{reqs.name_req}}</li>
-                    <li ng-show = "reqs.description_req">{{reqs.description_req}}</li>
-                </ul>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class = "col-6" id ="color-div">
+                <form style="display:none;"><input type="text" id="color" name="color" value="#123456" class="font"/></form>
+                <div id = "colorpicker"></div>
+                <br>
+                <input id="create_name" placeholder="Name" ng-model="create_name" type="text">
+                <br>
+                <textarea id = "create_description" placeholder="Description" ng-model="create_description" type="text"></textarea>
+                <br>
             </div>
         </div>
+        <div class="col-sm-6">
+            <div class = "col-6 create">
+                <h1>{{create_name}}</h1>
+                <div id="createDiv" class="listing-img-lg"></div>
+                <p>{{create_description}}</p>
+                <p>Price: $1.00</p>
+                <p>Patrons: </p>
+                <p>Hex Code: <span id="createHex"></span></p>
+                <p>RGB: <span id ="createRgb"></span> </p>
+                <button class="btn-listing" ng-click="createListing()">Create</button>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="col-6">
+                <div>
+                    <ul>
+                        <li ng-show = "reqs.name_req">{{reqs.name_req}}</li>
+                        <li ng-show = "reqs.description_req">{{reqs.description_req}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 

@@ -1,5 +1,5 @@
 (function(){
-    var createController = function($scope, marketFactory){
+    var createController = function($scope, marketFactory, $location){
         var listingsRef = marketFactory.getListingsRef();
         $scope.reqs = {};
 
@@ -24,26 +24,27 @@
             });
             console.log(listingsRef);
             console.log($scope.reqs);
-//            if($scope.reqs==null){
+            console.log(marketFactory.getNextAvailableId());
+            if($scope.create_name != null && $scope.create_description != null){
                 console.log("creating color");
                 var create_name = $scope.create_name;
             console.log(create_name);
                 var create_description = $scope.create_description;
-                listingsRef.child(create_name).update(
-                    {
-                        id: 14,
+                listingsRef.child(create_name)
+                    .update({
+                        id: marketFactory.getNextAvailableId(),
                         name: create_name,
                         price: '1.50',
                         description: create_description,
                         hex: hex,
                         rgb: rgb,
                         patrons: ''
-                    }
-                );
-//            }
+                    });
+                $location.path('/');
+            }
         };
     };
-    createController.$inject = ['$scope','marketFactory'];
+    createController.$inject = ['$scope','marketFactory', '$location'];
 //    $scope.createRgb =
     angular.module('marketApp').controller('createController', createController);
 }());

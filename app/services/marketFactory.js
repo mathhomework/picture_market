@@ -75,7 +75,13 @@
                 return {};
             }
         };
-
+        factory.getNextAvailableId = function(){
+            nums = [];
+            for(var x = 0; x< products.length; x++){
+                nums.push(products[x].id);
+            }
+            return Math.max.apply(Math, nums)+1;
+        };
         factory.componentToHex = function(c){
             var hex = c.toString(16);
             return hex.length == 1 ? "0" + hex : hex;
